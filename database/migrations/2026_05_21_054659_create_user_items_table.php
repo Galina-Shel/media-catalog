@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('user_id')
-                ->constrained();
+                ->constrained('user');
             $table->foreignId('item_id')
-                ->constrained();
+                ->constrained('item');
             $table->enum('status', ['planned', 'in_progress', 'completed', 'dropped;']);
             $table->unsignedTinyInteger('rating')->nullable(); //потом будет добавлено правило ограничения оценки (1-5)
-            $table->text('revwiew_text');
+            $table->text('review_text');
 
             $table->timestamps();
 
