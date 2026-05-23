@@ -23,6 +23,17 @@
     </header>
 
     <main style="max-width: 900px; margin: 0 auto; padding: 24px 16px;">
+        @if (session('success'))
+            <div style="border:1px solid #0a0; padding:10px; margin:10px 0;">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div style="border:1px solid #c00; padding:10px; margin:10px 0;">
+                {{ session('error') }}
+            </div>
+        @endif
         @yield('content')
     </main>
 

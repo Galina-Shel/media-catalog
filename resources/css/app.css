@@ -24,3 +24,5 @@ a {
     display: flex;
     gap: 12px;
 }
+
+@import './items.css';
